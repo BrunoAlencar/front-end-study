@@ -1,23 +1,31 @@
 {
-  "name": "front-end-study",
-  "version": "1.0.0",
-  "description": "Just a study repository!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrunoAlencar/front-end-study.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BrunoAlencar/front-end-study/issues"
-  },
-  "homepage": "https://github.com/BrunoAlencar/front-end-study#readme",
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "font-awesome": "^4.7.0"
-  }
+    "name": "front-end-study",
+    "version": "1.0.0",
+    "description": "Just a study repository!",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "echo start!",
+        "prestart": "echo first me!",
+        "poststart": "echo i am the last one",
+        "preinstall": "mkdirp src/components/bootstrap/ src/components/font-awesome/",
+        "postinstall": "cp -r node_modules/bootstrap/dist/ src/components/bootstrap/ && cp -r node_modules/font-awesome/css/ src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts/ src/components/font-awesome"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BrunoAlencar/front-end-study.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/BrunoAlencar/front-end-study/issues"
+    },
+    "homepage": "https://github.com/BrunoAlencar/front-end-study#readme",
+    "dependencies": {
+        "bootstrap": "^3.3.7",
+        "font-awesome": "^4.7.0"
+    },
+    "devDependencies": {
+        "mkdirp": "^0.5.1"
+    }
 }
