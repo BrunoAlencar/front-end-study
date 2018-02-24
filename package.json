@@ -8,6 +8,7 @@
         "start": "echo start!",
         "nodesass": "node-sass",
         "sassw": "node-sass --watch src/sass -o src/css",
+        "cleancss": "rm -rf src/css && mkdirp src/css",
         "prestart": "echo first me!",
         "poststart": "echo i am the last one",
         "preinstall": "mkdirp src/components/bootstrap/ src/components/font-awesome/",
