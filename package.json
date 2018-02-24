@@ -6,6 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "echo start!",
+        "nodesass": "node-sass",
+        "sassw": "node-sass --watch src/sass -o src/css",
         "prestart": "echo first me!",
         "poststart": "echo i am the last one",
         "preinstall": "mkdirp src/components/bootstrap/ src/components/font-awesome/",
@@ -26,6 +28,7 @@
         "font-awesome": "^4.7.0"
     },
     "devDependencies": {
-        "mkdirp": "^0.5.1"
+        "mkdirp": "^0.5.1",
+        "node-sass": "^4.7.2"
     }
 }

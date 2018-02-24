@@ -1,0 +1,28 @@
+$cor:orange;
+body {
+    background: $cor;
+}
+
+@mixin botao {
+    display: inline-block;
+    border-radius: 15px;
+    padding: 15px;
+    border: none;
+    font-size: 1.5em;
+}
+
+.botao-primary {
+    @include botao;
+    background-color: blue;
+    color: white;
+}
+
+.botao-danger {
+    @include botao;
+    background-color: red;
+}
+
+.botao-warning {
+    @include botao;
+    background-color: yellow;
+}
