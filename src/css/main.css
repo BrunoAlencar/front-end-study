@@ -1,0 +1,50 @@
+.header-animado {
+  height: 300px;
+  background-color: #64a59a; }
+
+.header-nav {
+  background-color: #84b8af; }
+  .js .header-nav {
+    height: 50px; }
+    .js .header-nav .container {
+      height: 100%; }
+  .header-nav__logo {
+    display: inline-block;
+    height: 50px;
+    max-width: 300px;
+    position: relative;
+    top: 10px;
+    z-index: 2; }
+    .header-nav__logo img {
+      height: 100%;
+      max-height: 100%; }
+  .header-nav__hamburgguer {
+    display: none; }
+    .js .header-nav__hamburgguer {
+      display: block;
+      float: right;
+      height: 100%;
+      border: none;
+      background-color: transparent;
+      color: white;
+      font-size: 2em;
+      padding: .1em .5em;
+      margin-right: -15px; }
+      .js .header-nav__hamburgguer:hover, .js .header-nav__hamburgguer:focus {
+        background-color: #74aea5; }
+  .header-nav__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .header-nav__menu a {
+      color: white;
+      display: block;
+      font-size: 1.5em;
+      border-top: 1px solid #58988d;
+      padding: 1em; }
+      .header-nav__menu a:hover {
+        background-color: #5c9e93; }
+    .js .header-nav__menu {
+      display: none; }
+    .menu-openned .header-nav__menu {
+      display: block; }
