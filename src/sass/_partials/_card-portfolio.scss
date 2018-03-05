@@ -1,0 +1,60 @@
+.card-portfolio {
+    @mixin sombra($direction, $angle, $distance) {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        background-color: #777;
+        width: 50%;
+        height: 20px;
+        bottom: 12px;
+        box-shadow: 0 15px 10px #777;
+        @if $direction=='esq' {
+            left: $distance;
+            transform: rotate($angle * -1);
+        }
+        @else {
+            right: $distance;
+            transform: rotate($angle);
+        }
+    }
+    &:before {
+        @include sombra('esq', 3deg, 5px);
+    }
+    &:after {
+        @include sombra('dir', 3deg, 5px);
+    }
+    padding: 0;
+    border-radius: 0;
+    border: 1px solid transparent;
+    position: relative;
+    &__imagem {
+        height: 230px;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            opacity: .7;
+            transition: opacity .3s linear;
+        }
+    }
+    &:hover {
+        img {
+            opacity: 1;
+        }
+        .card-portfolio__btn {
+            background-color: lighten($main-color, 30%);
+            columns: #fff;
+            &:hover {
+                background-color: saturate($main-color, 30%)
+            }
+        }
+    }
+    &__btn {
+        background-color: transparent;
+        display: block;
+        color: $main-color;
+        border: none;
+        border-radius: 0;
+        width: 100px;
+        transition: all .3s linear;
+    }
+}
