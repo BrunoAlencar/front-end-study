@@ -44,7 +44,22 @@ h6,
     @media screen and (min-width: 960px) {
       .header-animado__ilustra {
         background-image: url(../imagens/cenario_bg.png);
-        height: 300px; }
+        height: 300px;
+        /*.nuvens {
+                @include anima('cenario_nuvens.png');
+            }
+            .casas {
+                @include anima('cenario_casas.png', '30s linear infinite reverse')
+            }
+            .rua {
+                @include anima('cenario_rua.png', '30s linear infinite reverse')
+            }
+            .carrosCima {
+                @include anima('cenario_carrosCima.png', '15s linear infinite reverse')
+            }
+            .carrosBaixo {
+                @include anima('cenario_carrosBaixo.png', '15s linear infinite')
+            }*/ }
         .header-animado__ilustra > div {
           display: block;
           height: 100%;

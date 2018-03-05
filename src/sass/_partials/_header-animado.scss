@@ -59,7 +59,21 @@
                     transform: translateX(0%) translateZ(0);
                 }
             }
-            .nuvens {
+            $itens: ( nuvens:null, casas: '30s linear infinite reverse', rua: '30s linear infinite reverse', carrosCima: '15s linear infinite reverse', carrosBaixo: '15s linear infinite');
+            @each $key,
+            $valor in $itens {
+                @if $valor {
+                    .#{$key} {
+                        @include anima('cenario_#{$key}.png', $valor)
+                    }
+                }
+                @else {
+                    .#{$key} {
+                        @include anima('cenario_#{$key}.png')
+                    }
+                }
+            }
+            /*.nuvens {
                 @include anima('cenario_nuvens.png');
             }
             .casas {
@@ -73,7 +87,7 @@
             }
             .carrosBaixo {
                 @include anima('cenario_carrosBaixo.png', '15s linear infinite')
-            }
+            }*/
         }
     }
 }
