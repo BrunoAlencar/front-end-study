@@ -18,7 +18,7 @@
         }
     }
     &:before {
-        @include sombra('esq', 3deg, 5px);
+        @include sombra('esq', 3deg, 5.5px);
     }
     &:after {
         @include sombra('dir', 3deg, 5px);
