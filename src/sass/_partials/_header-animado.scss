@@ -6,6 +6,7 @@
     background-color: $main-color;
     padding-bottom: 0;
     margin-bottom: 0px;
+    overflow: hidden;
     @media screen and (min-width: 480px) {
         height: $h + 25;
     }
