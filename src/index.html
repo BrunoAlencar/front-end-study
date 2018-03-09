@@ -14,30 +14,9 @@
 
 <body>
 
-    <nav class="header-nav">
-        <div class="container">
-            <a href="index.html" class="header-nav__logo">
-                <img src="./imagens/logo.svg" alt="Logotipo Bruno Alencar">
-            </a>
-            <button aria-controls="mainMenu" aria-expanded="false" class="header-nav__hamburgguer" type="button">
-                <div class="header-nav__hambugguerParties">
-                    <span class="sr-only">Menu</span>   
-                    <i class="fa fa-bars" aria-hidden="true"></i> 
-                </div>
-            </button>
-            <ul class="header-nav__menu" id="mainMenu" aria-expanded="false">
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Sobre mim</a>
-                </li>
-                <li>
-                    <a href="#">Contato</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    @@include('./inc/nav.html')
+
+
 
     <div class="jumbotron header-animado">
 
@@ -59,61 +38,15 @@
             <div class="col-xs-12">
                 <h2>Últimos trabalhos</h2>
             </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="thumbnail card-portfolio">
-                    <h3 class="card-portfolio__title">titulo do trabalho</h3>
-                    <div class="card-portfolio__imagem">
-                        <img src="imagens/portfolio/01.jpg" alt="Texto alternativo">
-                    </div>
-                    <div class="caption card-portfolio__caption">
-                        <p class="card-portfolio__text">pequeno texto</p>
-                        <a href="#" class="card-portfolio__btn btn btn-primary" role="button">Ver mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="thumbnail card-portfolio">
-                    <h3 class="card-portfolio__title">titulo do trabalho</h3>
-                    <div class="card-portfolio__imagem">
-                        <img src="imagens/portfolio/02.jpg" alt="Texto alternativo">
-                    </div>
-                    <div class="caption card-portfolio__caption">
-                        <p class="card-portfolio__text">pequeno texto</p>
-                        <a href="#" class="card-portfolio__btn btn btn-primary" role="button">Ver mais</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="thumbnail card-portfolio">
-                    <h3 class="card-portfolio__title">titulo do trabalho</h3>
-                    <div class="card-portfolio__imagem">
-                        <img src="imagens/portfolio/03.jpg" alt="Texto alternativo">
-                    </div>
-                    <div class="caption card-portfolio__caption">
-                        <p class="card-portfolio__text">pequeno texto</p>
-                        <a href="#" class="card-portfolio__btn btn btn-primary" role="button">Ver mais</a>
-                    </div>
-                </div>
-            </div>
+            @@loop('./inc/card-portfolio.html', [ { "titulo": "Titulo alterado", "img":"imagens/portfolio/01.jpg", "texto":"Texto uhu", "link":"#", "alt":"Texto alternativoo" }, { "titulo": "Titulo alterado", "img":"imagens/portfolio/02.jpg", "texto":"Texto uhu",
+            "link":"#", "alt":"Texto alternativoo" }, { "titulo": "Titulo alterado", "img":"imagens/portfolio/03.jpg", "texto":"Texto uhu", "link":"#", "alt":"Texto alternativoo" } ])
 
         </div>
         <!-- row -->
     </div>
     <!--container -->
 
-    <footer class="rodape">
-        <div class="container">
-            <p class="text-right">Social:</p>
-            <ul class="list-inline pull-right">
-                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-dribbble"></i></a></li>
-            </ul>
-        </div>
-    </footer>
+    @@include('./inc/footer.html')
     <script src="./javascript/main.js"></script>
     <script src="./javascript/menu.js"></script>
 </body>
